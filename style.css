@@ -57,6 +57,10 @@
     align-items: center;
     padding: 10px 0;
     justify-content: space-between;
+       position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
   }
   nav p {
     font-size: 20px;
@@ -345,41 +349,73 @@
   footer p{
   margin-right: 30px;
   }
-  /* Thêm vào cuối file CSS */
-  @media screen and (max-width: 768px) {
-    
-    .all-c {
-      flex-direction: column;
-      margin: 40px 0;
-    }
   
-    .content-wheather-c1,
-    .content-wheather-c2 {
-      
-      width: 100%;
-      margin: 0;
-    }
-    .weather-index,.forecast-index,.coordinates,.health{
-      margin: 4px;
-    }
-    .coordinates,
-    .health {
-      width: 100%;
-      
-    }
-    nav {
-      width: 790px;
-      margin-right: 0;
-    }
-  
-    .container-input {
-      margin-right: 20px;
-    }
-    footer {
-      width: 790px;
-    }
+/* Thêm vào cuối file CSS */
+@media screen and (max-width: 768px) {
+  .all-c {
+    flex-direction: column;
+    margin: 30px 0px;
+    padding: 20px;
   }
-  /* Thêm vào cuối file CSS */
-  
-  
-  
+  .container-input {
+    margin-left: 10px;
+  }
+  .logo-logan p {
+    padding-right: 50px;
+  }
+  .content-wheather-c1,
+  .content-wheather-c2 {
+    width: 100%px;
+  }
+  .weather-index,
+  .forecast-index,
+  .coordinates,
+  .health {
+    margin: 10px 10px 2px 2px;
+    width: 100%;
+  }
+  .temp-wheather {
+    width: 100%;
+    padding-right: 10px;
+    margin: 100px 0 2px 2px;
+    height: 150px;
+  }
+  .weather-index {
+    height: 200px;
+  }
+  .all-index{
+    padding: 0;
+   
+  }
+  .indexel i{
+    font-size:20px ;
+  }
+  .indexel p{
+    padding: 0;
+  }
+  .indexel{
+height: 100px;
+  }
+
+  .coordinates,
+  .health {
+    width: 100%;
+    padding-right: 10px;
+  }
+  nav {
+    width: 390px;
+    display: block;
+  }
+
+  .container-input {
+    margin-right: 20px;
+  }
+  footer {
+    width: 390px;
+  }
+  .name-country {
+    width: 390px;
+  }
+}
+
+/* Thêm vào cuối file CSS */
