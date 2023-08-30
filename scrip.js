@@ -25,6 +25,7 @@ async function changeWeatherUI(valueSearch) {
 
   let data = await fetch(apiURL).then((res) => res.json());
   // console.log(data);
+  
 
   city.innerText = data.location.name;
 
@@ -52,13 +53,16 @@ async function changeWeatherUI(valueSearch) {
   } else {
     body.setAttribute("class", "oke");
   }
+  
 }
 
 // changeWeatherUI();
 
 search.addEventListener("keypress", function (e) {
   let valueSearch = search.value.trim();
-  if (e.code === "Enter") changeWeatherUI(valueSearch);
+  if (e.code === "Enter") 
+  changeWeatherUI(valueSearch);
+
 });
 window.addEventListener("load", function () {
   changeWeatherUI("London");
@@ -67,3 +71,15 @@ svg.addEventListener("click",function(){
   let valueSearch = search.value.trim();
   changeWeatherUI(valueSearch);
 })
+
+
+
+// scroll
+ScrollReveal().reveal('.fade-in', {
+  delay: 400,         // Độ trễ trong milliseconds
+  duration: 800,      // Thời gian hoàn thành animation trong milliseconds
+  distance: '70px',   // Khoảng cách mà phần tử di chuyển trong quá trình animation
+  origin: 'bottom',   // Hướng bắt đầu của animation
+  easing: 'ease-out', // Hàm làm mềm cho animation
+  reset: true         // Đặt lại animation khi phần tử ra khỏi tầm nhìn
+});
