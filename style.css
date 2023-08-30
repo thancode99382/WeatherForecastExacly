@@ -1,355 +1,388 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      scroll-behavior: smooth;
-  }
-  body {
-    background: linear-gradient(0deg, #4C4086, #151231);
-    transition: 0.3s ease-in-out;
-  }
-  /* nav */
-  .container-input {
-    position: relative;
-    margin-right: 500px;
-  }
-  
-  .input {
-    width: 150px;
-    padding: 10px 0px 10px 40px;
-    border-radius: 9999px;
-    border: solid 1px #333;
-    transition: all 0.2s ease-in-out;
-    outline: none;
-    opacity: 0.8;
-  }
-  
-  .container-input svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translate(0, -50%);
-  }
-  
-  .input:focus {
-    opacity: 1;
-    width: 250px;
-  }
-  /* input */
-  .logo-logan {
-    display: flex;
-    align-items: center;
-    margin-left: 100px;
-  }
-  nav i {
-    font-size: 50px;
-    margin-right: 30px;
-  }
-  nav {
-    background-color: rgb(29,23,63);
-    color: white;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    justify-content: space-between;
-       position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  }
-  nav p {
-    font-size: 20px;
-  }
-  .all-c{
-    margin: 120px 0 190px 190px;
-    display: flex;
-  }
-  .content-wheather-c1 {
-   
-  }
-  .temp-wheather {
-    color: #fff;
-  
-    width: 784px;
-    height: 224px;
-  
-    border-radius: 6px;
-    overflow: hidden;
-    background: url(img/images.png) no-repeat center/cover;
-  }
-  /* nóng */
-  .hot{
-    background: linear-gradient(0deg, rgb(229,222,226), rgb(105,96,123));
-  }
-  .hot .temp-wheather {
-    background: url(img/94982.png) no-repeat center/cover;
-  }
-  .hot nav{
-    background-color: rgb(53,49,66);
-  }
-  /* lạnh */
-  .cold{
-    background: linear-gradient(45deg, #957B78, #535174);
-  }
-  .cold .temp-wheather {
-    background: url(img/mua-dong-lanh-gia-nhung-co-chang-chinh-nhung-gia-lanh-ay-da-lam-nen-cai-am-nong-cua-tinh-nguoi-458511.png) no-repeat center/cover;
-  }
-  .cold nav{
-    background-color: #4A4D6C;
-  }
-  .hot .custom-loader{
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, rgb(105,96,123) 94%, #0000) top/8px 8px
-        no-repeat,
-      conic-gradient(#0000 30%, rgb(105,96,123));
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-    animation: s3 1s infinite linear;
-  }
-  .hot button{
-    background-color: rgb(105,96,123) ;
-  }
-  
-  .cold .custom-loader{
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, #4A4D6C 94%, #0000) top/8px 8px
-        no-repeat,
-      conic-gradient(#0000 30%, #4A4D6C);
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-    animation: s3 1s infinite linear;
-  }
-  .cold button{
-    background-color: #4A4D6C ;
-  }
-  
-  
-  
-  .name-country {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #0000006d;
-  }
-  
-  .temp {
-    margin-left: 20px;
-  }
-  .temp .value {
-    font-size: 96px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-  }
-  .des {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-  }
-  .temp-wheather i {
-    font-size: 50px;
-    margin-right: 20px;
-  }
-  .content-temp {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .coordinates {
-    position: relative;
-    margin-left: 10px;
-    background-color: #fff;
-    width: 343px;
-    height: 295px;
-    border-radius: 6px;
-  }
-  .content-coordinates {
-    padding: 50px;
-  }
-  .coordinates-title {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .coordinates-title-sub {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  .lat,.lon{
-    font: 14px;
-    font-weight: 400;
-  }
-  
-  /* loADER */
-  .custom-loader {
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, rgb(29,23,63) 94%, #0000) top/8px 8px
-        no-repeat,
-      conic-gradient(#0000 30%, rgb(29,23,63));
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-    animation: s3 1s infinite linear;
-  }
-  
-  @keyframes s3 {
-    100% {
-      transform: rotate(1turn);
-    }
-  }
-  /* LOATDER */
-  .content-coordinates-sub {
-    margin-top: 20px;
-    display: flex;
-  }
-  button {
-    position: absolute;
-    bottom: 30px;
-    width: 101px;
-    height: 33px;
-    background-color: rgb(29,23,63);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 400;
-  }
-  .weather-index {
-      margin-top: 15px;
-    background-color: #fff;
-    width: 784px;
-    height: 285px;
-    border-radius: 6px;
-  }
-  .weather-index p{
-      font-size: 20px;
-      font-weight: 600;
-  }
-  .content-index{
-      padding: 16px;
-  }
-  .health{
-  
-    height: 158px;
-    width: 343px;
-    background-color: #fff;
-    margin-left: 10px;
-    margin-top: 16px;
-    border: 6px;
-    border-radius: 6px;
-  
-  }
-  
-  .font-con{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(0deg, #4C4086, #151231);
+  transition: 0.3s ease-in-out;
+}
+/* nav */
+.container-input {
+  position: relative;
+  margin-right: 500px;
+}
+
+.input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+/* input */
+.logo-logan {
   display: flex;
-  justify-content: center;
   align-items: center;
-  }
-  .all-health{
-    padding: 20px;
-  }
-  .title-health{
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .content-health .content-1{
-  font-size: 18px;
-  font-weight: 400;
-  }
-  .content-health .content-2{
-    font-size: 14px;
-    font-weight: 400;
-    opacity: 0.6;
-    }
-    .font-health{
-      font-size: 50px;
-      margin-right: 20px;
-     
-    }
-  /* chỉ số  */
-  .indexel{
-    width: 153px;
-    height: 153px;
-    border-right: 1px solid #ccc;
-    text-align: center;
-    opacity: 0.8;
-  }
-  .all-index{
-    padding: 50px;
-    display: flex;
-  }
-  .indexel i{
-  font-size: 36px;
-  margin: 10px 0;
-  
-  }
-  .indexel p{
-    padding-top: 15px;
-  }
-  .forecast-index{
-    margin-top: 16px;
-    background-color: #fff;
-    border-radius: 6px;
-  }
-  .title-forecast-index{
+  margin-left: 100px;
+}
+nav i {
+  font-size: 50px;
+  margin-right: 30px;
+}
+nav {
+  background-color: rgb(29,23,63);
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+nav p {
+  font-size: 20px;
+}
+.all-c{
+  margin: 120px 0 190px 190px;
+  display: flex;
+}
+.content-wheather-c1 {
+ 
+}
+.temp-wheather {
+  color: #fff;
+
+  width: 784px;
+  height: 224px;
+
+  border-radius: 6px;
+  overflow: hidden;
+  background: url(img/images.png) no-repeat center/cover;
+}
+/* nóng */
+.hot{
+  background: linear-gradient(0deg, rgb(229,222,226), rgb(105,96,123));
+}
+.hot .temp-wheather {
+  background: url(img/94982.png) no-repeat center/cover;
+}
+.hot nav{
+  background-color: rgb(53,49,66);
+}
+/* lạnh */
+.cold{
+  background: linear-gradient(45deg, #957B78, #535174);
+}
+.cold .temp-wheather {
+  background: url(img/mua-dong-lanh-gia-nhung-co-chang-chinh-nhung-gia-lanh-ay-da-lam-nen-cai-am-nong-cua-tinh-nguoi-458511.png) no-repeat center/cover;
+}
+.cold nav{
+  background-color: #4A4D6C;
+}
+.hot .custom-loader{
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, rgb(105,96,123) 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 30%, rgb(105,96,123));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+.hot button{
+  background-color: rgb(105,96,123) ;
+}
+
+.cold .custom-loader{
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #4A4D6C 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 30%, #4A4D6C);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+.cold button{
+  background-color: #4A4D6C ;
+}
+
+
+
+.name-country {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #0000006d;
+}
+
+.temp {
+  margin-left: 20px;
+}
+.temp .value {
+  font-size: 96px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.des {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.temp-wheather i {
+  font-size: 50px;
+  margin-right: 20px;
+}
+.content-temp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.coordinates {
+  position: relative;
+  margin-left: 10px;
+  background-color: #fff;
+  width: 343px;
+  height: 295px;
+  border-radius: 6px;
+}
+.content-coordinates {
+  padding: 50px;
+}
+.coordinates-title {
   font-size: 20px;
   font-weight: 600;
-  }
-  .forecast-index-sub{
-    padding:10px;
-  }
-  .feelike-content{
-    font-size: 16px;
-  
-  }
-  .feelike-index{
-    font-size: 56px;
-  }
-  .content-forecast-index{
-    padding: 35px;
-  }
-  .content-important-el{
-    display: flex;
-    font-size: 16px;
-    justify-content:space-between;
-    align-items: center;
-    font-size: 400;
-  }
-  .padding-index-sub{
-    padding: 20px;
-  }
-  .icon-p{
-    display:flex;
-    column-gap: 10px;
-    align-items: center;
-  }
-  footer{
-  background-color: #fff;
-  height: 400px;
+}
+.coordinates-title-sub {
   font-size: 18px;
   font-weight: 600;
-  padding: 100px;
+  margin-bottom: 15px;
+}
+.lat,.lon{
+  font: 14px;
+  font-weight: 400;
+}
+
+/* loADER */
+.custom-loader {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, rgb(29,23,63) 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 30%, rgb(29,23,63));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/* LOATDER */
+.content-coordinates-sub {
+  margin-top: 20px;
   display: flex;
+}
+button {
+  position: absolute;
+  bottom: 30px;
+  width: 101px;
+  height: 33px;
+  background-color: rgb(29,23,63);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.weather-index {
+    margin-top: 15px;
+  background-color: #fff;
+  width: 784px;
+  height: 285px;
+  border-radius: 6px;
+}
+.weather-index p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.content-index{
+    padding: 16px;
+}
+.health{
+
+  height: 158px;
+  width: 343px;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-top: 16px;
+  border: 6px;
+  border-radius: 6px;
+
+}
+
+.font-con{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.all-health{
+  padding: 20px;
+}
+.title-health{
+  font-size: 20px;
+  font-weight: 600;
+}
+.content-health .content-1{
+font-size: 18px;
+font-weight: 400;
+}
+.content-health .content-2{
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  }
+  .font-health{
+    font-size: 50px;
+    margin-right: 20px;
+   
+  }
+/* chỉ số  */
+.indexel{
+  width: 153px;
+  height: 153px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  opacity: 0.8;
+}
+.all-index{
+  padding: 50px;
+  display: flex;
+}
+.indexel i{
+font-size: 36px;
+margin: 10px 0;
+
+}
+.indexel p{
+  padding-top: 15px;
+}
+.forecast-index{
+  margin-top: 16px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.title-forecast-index{
+font-size: 20px;
+font-weight: 600;
+}
+.forecast-index-sub{
+  padding:10px;
+}
+.feelike-content{
+  font-size: 16px;
+
+}
+.feelike-index{
+  font-size: 56px;
+}
+.content-forecast-index{
+  padding: 35px;
+}
+.content-important-el{
+  display: flex;
+  font-size: 16px;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 400;
+}
+.padding-index-sub{
+  padding: 20px;
+}
+.icon-p{
+  display:flex;
   column-gap: 10px;
-  }
-  footer i{
-    font-size: 30px;
+  align-items: center;
+}
+footer{
+background-color: #fff;
+height: 400px;
+font-size: 18px;
+font-weight: 600;
+padding: 100px;
+display: flex;
+column-gap: 10px;
+}
+footer i{
+  font-size: 30px;
+
+}
+footer p{
+margin-right: 30px;
+}
+/* Thêm vào cuối file CSS */
+@media screen and (max-width: 768px) {
   
+  .all-c {
+    flex-direction: column;
+    margin: 40px 0;
   }
-  footer p{
-  margin-right: 30px;
+
+  .content-wheather-c1,
+  .content-wheather-c2 {
+    
+    width: 100%;
+    margin: 0;
   }
-  
+  .weather-index,.forecast-index,.coordinates,.health{
+    margin: 4px;
+  }
+  .coordinates,
+  .health {
+    width: 100%;
+    
+  }
+  nav {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .container-input {
+    margin-right: 20px;
+  }
+  footer {
+    width: 100%;
+  }
+}
 /* Thêm vào cuối file CSS */
 @media screen and (max-width: 768px) {
   .all-c {
@@ -360,8 +393,11 @@
   .container-input {
     margin-left: 10px;
   }
-  .logo-logan p {
-    padding-right: 50px;
+  .logo-logan {
+    margin-left: 200px;
+  }
+  .logo-logan i {
+    display: none;
   }
   .content-wheather-c1,
   .content-wheather-c2 {
@@ -418,4 +454,3 @@ height: 100px;
   }
 }
 
-/* Thêm vào cuối file CSS */
