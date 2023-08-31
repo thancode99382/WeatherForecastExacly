@@ -41,7 +41,7 @@ async function changeWeatherUI(valueSearch) {
   indexVisi.innerText = data.current.vis_km + " km";
   indexHum.innerText = data.current.humidity + "%";
   indexUv.innerText = data.current.uv + " mW/cm2";
-  foreSub.innerText = data.current.feelslike_c;
+  foreSub.innerHTML = `${data.current.feelslike_c}<sup>o</sup>`;
   indexSub.innerText = data.current.pressure_mb + " mb";
   indexLat.innerText = data.location.lat;
   indexLon.innerText = data.location.lon;
