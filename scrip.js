@@ -36,7 +36,7 @@ async function changeWeatherUI(valueSearch) {
   des.innerText = data.current.condition.text;
   let temp = data.current.temp_c;
 
-  indexoc.innerText = temp;
+  indexoc.innerHTML = `${temp}<sup>o</sup>`;
   indexWind.innerText = data.current.wind_kph + " km";
   indexVisi.innerText = data.current.vis_km + " km";
   indexHum.innerText = data.current.humidity + "%";
