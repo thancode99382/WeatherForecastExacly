@@ -65,7 +65,7 @@ search.addEventListener("keypress", function (e) {
 
 });
 window.addEventListener("load", function () {
-  changeWeatherUI("London");
+  changeWeatherUI("Ha noi");
 });
 svg.addEventListener("click",function(){
   let valueSearch = search.value.trim();
